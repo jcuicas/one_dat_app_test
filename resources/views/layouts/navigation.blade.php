@@ -34,6 +34,12 @@
                     </x-slot>
 
                     <x-slot name="content">
+                        @if (auth()->user()->name == 'José Cuicas')
+                            <x-dropdown-link :href="route('agentes.create')">
+                                Registrar nuevo agente
+                            </x-dropdown-link>
+                        @endif
+
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Profile') }}
                         </x-dropdown-link>

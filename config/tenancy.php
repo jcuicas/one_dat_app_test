@@ -18,9 +18,9 @@ return [
      * Only relevant if you're using the domain or subdomain identification middleware.
      */
     'central_domains' => [
-        'one-dat-app.test',
+        //'one-dat-app.test',
         //'127.0.0.1',
-        //'localhost',
+        'localhost',
     ],
 
     /**

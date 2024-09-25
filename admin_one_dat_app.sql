@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 23-09-2024 a las 23:16:47
+-- Tiempo de generación: 25-09-2024 a las 00:04:44
 -- Versión del servidor: 8.0.30
 -- Versión de PHP: 8.2.19
 
@@ -74,8 +74,9 @@ CREATE TABLE `domains` (
 --
 
 INSERT INTO `domains` (`id`, `domain`, `tenant_id`, `created_at`, `updated_at`) VALUES
-(6, 'foo.one-dat-app.test', 'foo', '2024-09-24 02:33:10', '2024-09-24 02:33:10'),
-(7, 'bar.one-dat-app.test', 'bar', '2024-09-24 02:33:14', '2024-09-24 02:33:14');
+(1, 'carlos-guevara-tdzncdbuwp4gty.localhost', 'carlos_guevara_tDzNcDbuWP4Gty', '2024-09-25 02:09:30', '2024-09-25 02:09:30'),
+(2, 'luis-lopez-o7a0mncqra.localhost', 'luis_lopez_o7a0mncqra', '2024-09-25 02:09:44', '2024-09-25 02:09:44'),
+(3, 'martha-mireles-puyoplx5nun4ji.localhost', 'martha_mireles_pUyoPlX5nuN4jI', '2024-09-25 02:35:37', '2024-09-25 02:35:37');
 
 -- --------------------------------------------------------
 
@@ -183,7 +184,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('faS9KUWLqDYTI7JHgW8QiSjgXQ3BYB2QbaQ8zXrW', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiQnFsY2lQMURrdzBuZlNSMGZiZDA1dFIyMTVCczI5WkRLb1ZQdVlPUyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzg6Imh0dHA6Ly9vbmUtZGF0LWFwcC50ZXN0L2FnZW50ZXMvY3JlYXRlIjt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9', 1727130795);
+('a77t0nPJqKHOebyFiItH1wOwW452sjjZ0jQZ2I9h', NULL, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiUjBWQW01eVdubXI4RWsyN3NBbUM3Z2lkbUNKMGJ4c0hQcGtPaFNsaiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwOCI7fX0=', 1727222637);
 
 -- --------------------------------------------------------
 
@@ -203,8 +204,9 @@ CREATE TABLE `tenants` (
 --
 
 INSERT INTO `tenants` (`id`, `created_at`, `updated_at`, `data`) VALUES
-('bar', '2024-09-24 02:33:14', '2024-09-24 02:33:14', '{\"created_at\": \"2024-09-23 22:33:14\", \"updated_at\": \"2024-09-23 22:33:14\", \"tenancy_db_name\": \"agent_bar\"}'),
-('foo', '2024-09-24 02:33:09', '2024-09-24 02:33:09', '{\"created_at\": \"2024-09-23 22:33:09\", \"updated_at\": \"2024-09-23 22:33:09\", \"tenancy_db_name\": \"agent_foo\"}');
+('carlos_guevara_tDzNcDbuWP4Gty', '2024-09-25 02:09:25', '2024-09-25 02:09:25', '{\"created_at\": \"2024-09-24 22:09:25\", \"updated_at\": \"2024-09-24 22:09:25\", \"tenancy_db_name\": \"agent_carlos_guevara_tDzNcDbuWP4Gty\"}'),
+('luis_lopez_o7a0mncqra', '2024-09-25 02:09:43', '2024-09-25 02:09:43', '{\"created_at\": \"2024-09-24 22:09:43\", \"updated_at\": \"2024-09-24 22:09:43\", \"tenancy_db_name\": \"agent_luis_lopez_o7a0mncqra\"}'),
+('martha_mireles_pUyoPlX5nuN4jI', '2024-09-25 02:35:37', '2024-09-25 02:35:37', '{\"created_at\": \"2024-09-24 22:35:37\", \"updated_at\": \"2024-09-24 22:35:37\", \"tenancy_db_name\": \"agent_martha_mireles_pUyoPlX5nuN4jI\"}');
 
 -- --------------------------------------------------------
 
@@ -315,7 +317,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `domains`
 --
 ALTER TABLE `domains`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `failed_jobs`

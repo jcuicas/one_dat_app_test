@@ -34,7 +34,7 @@ Laravel Auth Breeze
 	
 7.- Ejecutar el comando:
 
-	php artisan serve --host=one-dat-app.test --port=80
+	php artisan serve --host=localhost --port=8008
 	
 =========================
 Cambiar a idioma español

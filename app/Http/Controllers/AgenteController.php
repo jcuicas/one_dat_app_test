@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Tenant;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class AgenteController extends Controller
 {
@@ -28,8 +29,15 @@ class AgenteController extends Controller
      */
     public function store(Request $request)
     {
-        $tenant = Tenant::create(['id' => $request->name]);
-        $tenant->createDomain(['domain' => $request->name.'.one-dat-app.test',]);
+        $countName = Str::length($request->name);
+        $randomName = Str::random($countName); // Genera una cadena aleatoria de 10 caracteres
+        
+        $slugDB = Str::slug($request->name, '_');
+        $slugDomain = Str::slug($request->name);
+
+        $tenant = Tenant::create(['id' => $slugDB.'_'.$randomName]);
+        $tenant->createDomain(['domain' => $slugDomain.'-'.$randomName.'.localhost',]);
+
         return back();
     }
 

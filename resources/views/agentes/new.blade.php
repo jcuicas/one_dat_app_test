@@ -1,5 +1,4 @@
-
-<h1>Crear agente</h1>
+<h1>Crear nuevo agente</h1>
 <x-guest-layout>
     <form method="POST" action="{{ route('agentes.store') }}">
         @csrf
